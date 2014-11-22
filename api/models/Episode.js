@@ -20,7 +20,7 @@ module.exports = {
 
     explicit: {
       type: 'boolean',
-      defaultsTo: ''
+      defaultsTo: false
     },
 
     image: {
