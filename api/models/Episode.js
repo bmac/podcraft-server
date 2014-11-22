@@ -1,5 +1,5 @@
 /**
-* Podcast.js
+* Episode.js
 *
 * @description :: TODO: You might write a short summary of how this model works and what it represents here.
 * @docs        :: http://sailsjs.org/#!documentation/models
@@ -8,37 +8,7 @@
 module.exports = {
 
   attributes: {
-    feedXML: {
-      type: 'text',
-      defaultsTo: ''
-    },
-
-    feedUrl: {
-      type: 'string',
-      unique: true
-    },
-    
     title: {
-      type: 'string',
-      defaultsTo: ''
-    },
-
-    link: {
-      type: 'string',
-      defaultsTo: ''
-    },
-
-    language: {
-      type: 'string',
-      defaultsTo: ''
-    },
-
-    copyright: {
-      type: 'string',
-      defaultsTo: ''
-    },
-
-    subtitle: {
       type: 'string',
       defaultsTo: ''
     },
@@ -53,25 +23,30 @@ module.exports = {
       defaultsTo: ''
     },
 
-    summary: {
-      type: 'string',
-      defaultsTo: ''
-    },
-
-    description: {
-      type: 'string',
-      defaultsTo: ''
-    },
-
     image: {
       type: 'string',
       defaultsTo: ''
     },
 
+    summary: {
+      type: 'string',
+      defaultsTo: ''
+    },
+
+    mediaUrl: {
+      type: 'string',
+      defaultsTo: ''
+    },
+
+    pubDate: {
+      type: 'datetime',
+      defaultsTo: ''
+    },
+
     // Associations
-    episodes:{
-      collection: 'episode',
-      via: 'podcast'
+    podcast: {
+      model: 'podcast',
+      required: true
     }
   }
 };
