@@ -15,57 +15,62 @@ module.exports = {
 
     feedUrl: {
       type: 'string',
-      unique: true
+      unique: true,
+      url: true
     },
     
     title: {
       type: 'string',
-      defaultsTo: ''
+      required: true,
+      notEmpty: true
     },
 
     link: {
       type: 'string',
-      defaultsTo: ''
+      required: true,
+      url: true
     },
 
     language: {
       type: 'string',
-      defaultsTo: ''
+      required: true
     },
 
     copyright: {
       type: 'string',
-      defaultsTo: ''
+      required: true
     },
 
     subtitle: {
       type: 'string',
-      defaultsTo: ''
+      required: true
     },
 
     author: {
       type: 'string',
-      defaultsTo: ''
+      required: true
     },
 
     explicit: {
       type: 'boolean',
-      defaultsTo: ''
+      boolean: true
     },
 
     summary: {
       type: 'string',
-      defaultsTo: ''
+      required: true
     },
 
     description: {
       type: 'string',
-      defaultsTo: ''
+      required: true
     },
 
     image: {
       type: 'string',
-      defaultsTo: ''
+      required: true,
+      notEmpty: true,
+      url: true
     },
 
     // Associations
